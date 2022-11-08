@@ -17,10 +17,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/crunchy-labs/crunchy-cli/cli/commands"
-	"github.com/crunchy-labs/crunchy-cli/utils"
-	"github.com/crunchy-labs/crunchyroll-go/v3"
-	crunchyUtils "github.com/crunchy-labs/crunchyroll-go/v3/utils"
+	"github.com/ottdump/crunchy-cli/cli/commands"
+	"github.com/ottdump/crunchy-cli/utils"
+	"github.com/ottdump/crunchyroll-go/v3"
+	crunchyUtils "github.com/ottdump/crunchyroll-go/v3/utils"
 	"github.com/grafov/m3u8"
 	"github.com/spf13/cobra"
 )
@@ -209,7 +209,7 @@ func init() {
 	Cmd.Flags().BoolVar(&archiveNoSubtitleOptimizations,
 		"no-subtitle-optimizations",
 		false,
-		"Disable subtitle optimizations. See https://github.com/crunchy-labs/crunchy-cli/issues/66 for more information")
+		"Disable subtitle optimizations. See https://github.com/ottdump/crunchy-cli/issues/66 for more information")
 }
 
 func archive(urls []string) error {
@@ -590,7 +590,7 @@ func archiveDownloadSubtitles(filename string, subtitles ...*crunchyroll.Subtitl
 func archiveFFmpeg(ctx context.Context, dst io.Writer, videoFiles, audioFiles, subtitleFiles []string) error {
 	var input, maps, metadata []string
 	re := regexp.MustCompile(`(?m)_([a-z]{2}-([A-Z]{2}|[0-9]{3}))_(video|audio|subtitle)`)
-	// https://github.com/crunchy-labs/crunchy-cli/issues/32
+	// https://github.com/ottdump/crunchy-cli/issues/32
 	videoLength32Fix := regexp.MustCompile(`Duration:\s?(\d+):(\d+):(\d+).(\d+),`)
 
 	videoLength := [4]int{0, 0, 0, 0}
@@ -713,7 +713,7 @@ func archiveFFmpeg(ctx context.Context, dst io.Writer, videoFiles, audioFiles, s
 		reencode = true
 	}
 
-	// very dirty solution to https://github.com/crunchy-labs/crunchy-cli/issues/32.
+	// very dirty solution to https://github.com/ottdump/crunchy-cli/issues/32.
 	// this might get triggered when not needed but there is currently no easy way to
 	// bypass this unwanted triggering
 	if reencode {
@@ -766,7 +766,7 @@ func archiveExtractEpisodes(url string) ([][]utils.FormatInformation, error) {
 	}
 
 	if _, ok := crunchyroll.ParseEpisodeURL(url); ok {
-		return nil, fmt.Errorf("archiving episodes by url is no longer supported (thx crunchyroll). use the series url instead and filter after the given episode (https://github.com/crunchy-labs/crunchy-cli/wiki/Cli#filter)")
+		return nil, fmt.Errorf("archiving episodes by url is no longer supported (thx crunchyroll). use the series url instead and filter after the given episode (https://github.com/ottdump/crunchy-cli/wiki/Cli#filter)")
 	}
 
 	episodes, err := utils.ExtractEpisodes(url, languagesAsLocale...)

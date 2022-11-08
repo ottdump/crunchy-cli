@@ -2,9 +2,9 @@ package info
 
 import (
 	"fmt"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands"
-	"github.com/crunchy-labs/crunchy-cli/utils"
-	crunchyUtils "github.com/crunchy-labs/crunchyroll-go/v3/utils"
+	"github.com/ottdump/crunchy-cli/cli/commands"
+	"github.com/ottdump/crunchy-cli/utils"
+	crunchyUtils "github.com/ottdump/crunchyroll-go/v3/utils"
 	"github.com/spf13/cobra"
 )
 

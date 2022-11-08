@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	"github.com/crunchy-labs/crunchy-cli/utils"
+	"github.com/ottdump/crunchy-cli/utils"
 	"os"
 	"os/exec"
 	"runtime"

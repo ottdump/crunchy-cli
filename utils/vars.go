@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/crunchy-labs/crunchyroll-go/v3"
+	"github.com/ottdump/crunchyroll-go/v3"
 	"net/http"
 )
 

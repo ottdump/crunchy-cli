@@ -14,9 +14,7 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: |
-        go mod tidy
-        go build -v .
+      run: go build -v .
 
     - name: Test
       run: go test -v .

@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"github.com/crunchy-labs/crunchy-cli/utils"
+	"github.com/ottdump/crunchy-cli/utils"
 	"io"
 	"os"
 	"path/filepath"

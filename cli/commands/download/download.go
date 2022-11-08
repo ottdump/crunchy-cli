@@ -3,10 +3,10 @@ package download
 import (
 	"context"
 	"fmt"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands"
-	"github.com/crunchy-labs/crunchy-cli/utils"
-	"github.com/crunchy-labs/crunchyroll-go/v3"
-	crunchyUtils "github.com/crunchy-labs/crunchyroll-go/v3/utils"
+	"github.com/ottdump/crunchy-cli/cli/commands"
+	"github.com/ottdump/crunchy-cli/utils"
+	"github.com/ottdump/crunchyroll-go/v3"
+	crunchyUtils "github.com/ottdump/crunchyroll-go/v3/utils"
 	"github.com/grafov/m3u8"
 	"github.com/spf13/cobra"
 	"math"
@@ -281,7 +281,7 @@ func downloadExtractEpisodes(url string) ([][]utils.FormatInformation, error) {
 
 	if downloadAudioFlag != "" {
 		if _, ok := crunchyroll.ParseEpisodeURL(url); ok {
-			return nil, fmt.Errorf("downloading episodes by url and specifying a language is no longer supported (thx crunchyroll). use the series url instead and filter after the given episode (https://github.com/crunchy-labs/crunchy-cli/wiki/Cli#filter)")
+			return nil, fmt.Errorf("downloading episodes by url and specifying a language is no longer supported (thx crunchyroll). use the series url instead and filter after the given episode (https://github.com/ottdump/crunchy-cli/wiki/Cli#filter)")
 		}
 
 		var err error

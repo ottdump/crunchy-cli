@@ -2,7 +2,7 @@ package utils
 
 import (
 	"fmt"
-	"github.com/crunchy-labs/crunchyroll-go/v3"
+	"github.com/ottdump/crunchyroll-go/v3"
 	"reflect"
 	"runtime"
 	"strings"

@@ -3,15 +3,15 @@ package cli
 import (
 	"context"
 	"fmt"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands/archive"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands/download"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands/info"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands/login"
-	"github.com/crunchy-labs/crunchy-cli/cli/commands/update"
-	"github.com/crunchy-labs/crunchy-cli/utils"
-	"github.com/crunchy-labs/crunchyroll-go/v3"
-	crunchyUtils "github.com/crunchy-labs/crunchyroll-go/v3/utils"
+	"github.com/ottdump/crunchy-cli/cli/commands"
+	"github.com/ottdump/crunchy-cli/cli/commands/archive"
+	"github.com/ottdump/crunchy-cli/cli/commands/download"
+	"github.com/ottdump/crunchy-cli/cli/commands/info"
+	"github.com/ottdump/crunchy-cli/cli/commands/login"
+	"github.com/ottdump/crunchy-cli/cli/commands/update"
+	"github.com/ottdump/crunchy-cli/utils"
+	"github.com/ottdump/crunchyroll-go/v3"
+	crunchyUtils "github.com/ottdump/crunchyroll-go/v3/utils"
 	"github.com/spf13/cobra"
 	"os"
 	"runtime/debug"
@@ -32,7 +32,7 @@ var (
 var RootCmd = &cobra.Command{
 	Use:     "crunchy-cli",
 	Version: utils.Version,
-	Short:   "Download crunchyroll videos with ease. See the wiki for details about the cli and library: https://github.com/crunchy-labs/crunchy-cli/wiki",
+	Short:   "Download crunchyroll videos with ease. See the wiki for details about the cli and library: https://github.com/ottdump/crunchy-cli/wiki",
 
 	SilenceErrors: true,
 	SilenceUsage:  true,

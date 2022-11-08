@@ -3,17 +3,17 @@
 A [Go](https://golang.org) written cli client for [crunchyroll](https://www.crunchyroll.com). To use it, you need a crunchyroll premium account for full access & features.
 
 <p align="center">
-  <a href="https://github.com/crunchy-labs/crunchy-cli">
-    <img src="https://img.shields.io/github/languages/code-size/crunchy-labs/crunchy-cli?style=flat-square" alt="Code size">
+  <a href="https://github.com/ottdump/crunchy-cli">
+    <img src="https://img.shields.io/github/languages/code-size/ottdump/crunchy-cli?style=flat-square" alt="Code size">
   </a>
-  <a href="https://github.com/crunchy-labs/crunchy-cli/releases/latest">
-    <img src="https://img.shields.io/github/downloads/crunchy-labs/crunchy-cli/total?style=flat-square" alt="Download Badge">
+  <a href="https://github.com/ottdump/crunchy-cli/releases/latest">
+    <img src="https://img.shields.io/github/downloads/ottdump/crunchy-cli/total?style=flat-square" alt="Download Badge">
   </a>
-  <a href="https://github.com/crunchy-labs/crunchy-cli/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/crunchy-labs/crunchy-cli?style=flat-square" alt="License">
+  <a href="https://github.com/ottdump/crunchy-cli/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/ottdump/crunchy-cli?style=flat-square" alt="License">
   </a>
-  <a href="https://github.com/crunchy-labs/crunchy-cli/releases/latest">
-    <img src="https://img.shields.io/github/v/release/crunchy-labs/crunchy-cli?style=flat-square" alt="Release">
+  <a href="https://github.com/ottdump/crunchy-cli/releases/latest">
+    <img src="https://img.shields.io/github/v/release/ottdump/crunchy-cli?style=flat-square" alt="Release">
   </a>
   <a href="https://discord.gg/PXGPGpQxgk">
     <img src="https://img.shields.io/discord/915659846836162561?label=discord&style=flat-square" alt="Discord">
@@ -30,7 +30,7 @@ A [Go](https://golang.org) written cli client for [crunchyroll](https://www.crun
 
 _This repo was former known as **crunchyroll-go** (which still exists but now contains only the library part) but got split up into two separate repositories to provide more flexibility._
 
-> This tool relies on the [crunchyroll-go](https://github.com/crunchy-labs/crunchyroll-go) library to communicate with crunchyroll.
+> This tool relies on the [crunchyroll-go](https://github.com/ottdump/crunchyroll-go) library to communicate with crunchyroll.
 > The library enters maintenance mode (only small fixes, no new features) with version v3 in favor of rewriting it completely in Rust.
 > **crunchy-cli** follows it (with version v2.3.0) and won't have major updates until the Rust rewrite of the library reaches a good usable state.
 
@@ -44,10 +44,10 @@ _This repo was former known as **crunchyroll-go** (which still exists but now co
 
 ## 💾 Get the executable
 
-- 📥 Download the latest binaries [here](https://github.com/crunchy-labs/crunchy-cli/releases/latest) or get it from below:
-  - [Linux (x64)](https://smartrelease.bytedream.org/github/crunchy-labs/crunchy-cli/crunchy-{tag}_linux)
-  - [Windows (x64)](https://smartrelease.bytedream.org/github/crunchy-labs/crunchy-cli/crunchy-{tag}_windows.exe)
-  - [MacOS (x64)](https://smartrelease.bytedream.org/github/crunchy-labs/crunchy-cli/crunchy-{tag}_darwin)
+- 📥 Download the latest binaries [here](https://github.com/ottdump/crunchy-cli/releases/latest) or get it from below:
+  - [Linux (x64)](https://smartrelease.bytedream.org/github/ottdump/crunchy-cli/crunchy-{tag}_linux)
+  - [Windows (x64)](https://smartrelease.bytedream.org/github/ottdump/crunchy-cli/crunchy-{tag}_windows.exe)
+  - [MacOS (x64)](https://smartrelease.bytedream.org/github/ottdump/crunchy-cli/crunchy-{tag}_darwin)
 - If you use Arch btw. or any other Linux distro which is based on Arch Linux, you can download the package via the [AUR](https://aur.archlinux.org/packages/crunchyroll-go/):
   ```shell
   $ yay -S crunchy-cli
@@ -57,24 +57,24 @@ _This repo was former known as **crunchyroll-go** (which still exists but now co
   $ scoop bucket add extras # <- in case you haven't added the extra repository already
   $ scoop install crunchyroll-go
   ```
-- 🛠 Build it yourself. Must be done if your target platform is not covered by the [provided binaries](https://github.com/crunchy-labs/crunchy-cli/releases/latest) (like Raspberry Pi or M1 Mac):
+- 🛠 Build it yourself. Must be done if your target platform is not covered by the [provided binaries](https://github.com/ottdump/crunchy-cli/releases/latest) (like Raspberry Pi or M1 Mac):
   - use `make` (requires `go` to be installed):
   ```shell
-  $ git clone https://github.com/crunchy-labs/crunchy-cli
+  $ git clone https://github.com/ottdump/crunchy-cli
   $ cd crunchy-cli
   $ make
   $ sudo make install # <- only if you want to install it on your system
   ```
   - use `go`:
   ```shell
-  $ git clone https://github.com/crunchy-labs/crunchy-cli
+  $ git clone https://github.com/ottdump/crunchy-cli
   $ cd crunchy-cli
   $ go build -o crunchy .
   ```
 
 ## 📝 Examples
 
-_Before reading_: Because of the huge functionality not all cases can be covered in the README. Make sure to check the [wiki](https://github.com/crunchy-labs/crunchy-cli/wiki/Cli), further usages and options are described there.
+_Before reading_: Because of the huge functionality not all cases can be covered in the README. Make sure to check the [wiki](https://github.com/ottdump/crunchy-cli/wiki/Cli), further usages and options are described there.
 
 ### Login
 
@@ -161,7 +161,7 @@ The following flags can be (optional) passed to modify the [archive](#archive) p
 | `-l`  | `--language`   | Audio locale which should be downloaded. Can be used multiple times.                                                                                                                                    |
 | `-d`  | `--directory`  | Directory to download the video(s) to.                                                                                                                                                                  |
 | `-o`  | `--output`     | Name of the output file.                                                                                                                                                                                |
-| `-m`  | `--merge`      | Sets the behavior of the stream merging. Valid behaviors are 'auto', 'audio', 'video'. See the [wiki](https://github.com/crunchy-labs/crunchy-cli/wiki/Cli#archive) for more information.                  |
+| `-m`  | `--merge`      | Sets the behavior of the stream merging. Valid behaviors are 'auto', 'audio', 'video'. See the [wiki](https://github.com/ottdump/crunchy-cli/wiki/Cli#archive) for more information.                  |
 | `-c`  | `--compress`   | If is set, all output will be compresses into an archive. This flag sets the name of the compressed output file and the file ending specifies the compression algorithm (gzip, tar, zip are supported). |
 | `-r`  | `--resolution` | The resolution of the video(s). `best` for best resolution, `worst` for worst.                                                                                                                          |
 | `-g`  | `--goroutines` | Sets how many parallel segment downloads should be used.                                                                                                                                                |
