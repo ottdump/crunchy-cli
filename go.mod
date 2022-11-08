@@ -1,7 +1,6 @@
 module github.com/ottdump/crunchy-cli
 
 go 1.19
-go mod download github.com/grafov/m3u8
 
 require (
 	github.com/ottdump/crunchyroll-go/v3 v3.0.6
