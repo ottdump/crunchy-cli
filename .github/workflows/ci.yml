@@ -15,8 +15,8 @@ jobs:
 
     - name: Build
       run: 
-      - go mod tidy
-      - go build -v .
+        go mod tidy
+        go build -v .
 
     - name: Test
       run: go test -v .
