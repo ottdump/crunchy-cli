@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-var Version = "development"
+var Version = "master"
 
 var (
 	Crunchy *crunchyroll.Crunchyroll

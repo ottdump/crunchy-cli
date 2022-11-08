@@ -1,4 +1,4 @@
-VERSION=development
+VERSION=master
 BINARY_NAME=crunchy
 VERSION_BINARY_NAME=$(BINARY_NAME)-v$(VERSION)
 
