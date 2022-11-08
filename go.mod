@@ -1,4 +1,4 @@
-module github.com/ottdump/crunchy-cli
+module github.com/libDriveX/crunchy-cli
 
 go 1.19
 
