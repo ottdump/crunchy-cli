@@ -2,8 +2,8 @@ package utils
 
 import (
 	"fmt"
-	"github.com/ottdump/crunchyroll-go/v3"
-	"github.com/ottdump/crunchyroll-go/v3/utils"
+	""
+	"/utils"
 	"os"
 	"os/exec"
 	"runtime"
